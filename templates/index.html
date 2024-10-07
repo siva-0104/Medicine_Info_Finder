@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Information</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="language-selection" id="language-selection">
+        <h2>Select Your Language</h2>
+        <div class="language-buttons">
+            <button class="lang-btn" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="te">తెలుగు</button>
+            <button class="lang-btn" data-lang="hi">हिन्दी</button>
+            <button class="lang-btn" data-lang="ta">தமிழ்</button>
+        </div>
+    </div>
+    <div class="container" id="container" style="display:none;">
+        <h1 data-translate-key="header">Medicine Information Finder</h1>
+        <form id="medicine-form">
+            <label for="medicine-name" data-translate-key="name-label">Enter Medicine Name:</label>
+            <input type="text" id="medicine-name" name="medicineName" placeholder="e.g., Paracetamol">
+            
+            <label for="medicine-image" data-translate-key="image-label">Or Upload Medicine Image:</label>
+            <input type="file" id="medicine-image" name="medicineImage">
+            
+            <button type="submit" data-translate-key="submit-btn">Get Details</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <!-- Loading Symbol -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Modal Popup -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-result"></div>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
