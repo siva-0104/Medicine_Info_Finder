@@ -19,7 +19,7 @@ merged_df = pd.read_csv(r'C:\Users\siva\Desktop\PJT\MedCare\data\preprocessed_da
 
 # Initialize Gemini API (Placeholder function)
 def initialize_gemini():
-    genai.configure(api_key="AIzaSyCPCrpxgM-cBdYd-Y-GOgWlr8PSV4Ft_k8")  # Replace with your actual API key
+    genai.configure(api_key="***") 
     generation_config = {"temperature": 0.9, "top_p": 1, "top_k": 1, "max_output_tokens": 5000}
     model = genai.GenerativeModel("gemini-pro", generation_config=generation_config)
     return model
